@@ -346,6 +346,13 @@ class LogCallback(TrainerCallback):
                 )
                 self.thread_pool.submit(self._write_log, args.output_dir, logs)
 
+class AdaloraCallback(TrainerCallback):
+    @override
+    def on_optimizer_step(self, args: "TrainingArguments", state: "TrainerState", control: "TrainerControl", **kwargs):
+        # print("### 更新预算")
+        model = kwargs["model"]
+        model.base_model.update_and_allocate(state.global_step)
+
 
 class ReporterCallback(TrainerCallback):
     r"""

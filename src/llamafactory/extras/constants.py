@@ -71,8 +71,11 @@ TRAINER_LOG = "trainer_log.jsonl"
 TRAINING_ARGS = "training_args.yaml"
 
 TRAINING_STAGES = {
-    "Supervised Fine-Tuning": "sft",
-    "Reward Modeling": "rm",
+    "SFT_AdaLoRA": "sft_adalora",
+    "SFT_MGLoRA": "sft_mglora",
+    "MPA": "mpa",
+    "SFT": "sft",
+    "RM": "rm",
     "PPO": "ppo",
     "DPO": "dpo",
     "KTO": "kto",
@@ -2042,7 +2045,7 @@ register_model_group(
             DownloadSource.MODELSCOPE: "Qwen/QwQ-32B-Preview",
         },
     },
-    template="qwen",
+    template="qwen2.5",
 )
 
 

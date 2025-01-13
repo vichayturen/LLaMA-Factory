@@ -32,6 +32,9 @@ from .ppo import run_ppo
 from .pt import run_pt
 from .rm import run_rm
 from .sft import run_sft
+from .sft_adalora import run_sft_adalora
+from .sft_mglora import run_sft_mglora
+from .mpa import run_mpa
 from .trainer_utils import get_ray_trainer, get_swanlab_callback
 
 
@@ -64,6 +67,10 @@ def _training_function(config: Dict[str, Any]) -> None:
         run_pt(model_args, data_args, training_args, finetuning_args, callbacks)
     elif finetuning_args.stage == "sft":
         run_sft(model_args, data_args, training_args, finetuning_args, generating_args, callbacks)
+    elif finetuning_args.stage == "sft_adalora":
+        run_sft_adalora(model_args, data_args, training_args, finetuning_args, generating_args, callbacks)
+    elif finetuning_args.stage == "sft_mglora":
+        run_sft_mglora(model_args, data_args, training_args, finetuning_args, generating_args, callbacks)
     elif finetuning_args.stage == "rm":
         run_rm(model_args, data_args, training_args, finetuning_args, callbacks)
     elif finetuning_args.stage == "ppo":
@@ -72,6 +79,8 @@ def _training_function(config: Dict[str, Any]) -> None:
         run_dpo(model_args, data_args, training_args, finetuning_args, callbacks)
     elif finetuning_args.stage == "kto":
         run_kto(model_args, data_args, training_args, finetuning_args, callbacks)
+    elif finetuning_args.stage == "mpa":
+        run_mpa(model_args, data_args, training_args, finetuning_args, callbacks)
     else:
         raise ValueError(f"Unknown task: {finetuning_args.stage}.")
 

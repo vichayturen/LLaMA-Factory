@@ -18,10 +18,12 @@ from llamafactory.webui.interface import create_ui
 
 
 def main():
+    # os.environ["CUDA_VISIBLE_DEVICES"] = "0"
     gradio_ipv6 = os.getenv("GRADIO_IPV6", "0").lower() in ["true", "1"]
     gradio_share = os.getenv("GRADIO_SHARE", "0").lower() in ["true", "1"]
-    server_name = os.getenv("GRADIO_SERVER_NAME", "[::]" if gradio_ipv6 else "0.0.0.0")
-    create_ui().queue().launch(share=gradio_share, server_name=server_name, inbrowser=True)
+    # server_name = os.getenv("GRADIO_SERVER_NAME", "[::]" if gradio_ipv6 else "0.0.0.0")
+    server_name = os.getenv("GRADIO_SERVER_NAME", "[::]" if gradio_ipv6 else "127.0.0.1")
+    create_ui().queue().launch(share=gradio_share, server_name=server_name)
 
 
 if __name__ == "__main__":
