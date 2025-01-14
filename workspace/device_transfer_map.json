@@ -1,0 +1,4 @@
+{
+    "model": "cuda:0",
+    "model.layers.13": "cuda:1"
+}
