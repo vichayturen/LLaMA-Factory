@@ -4,13 +4,13 @@ from transformers import Qwen2VLForConditionalGeneration, AutoTokenizer, AutoPro
 from qwen_vl_utils import process_vision_info
 
 
-model_dir = "/media/user/备份/models/Qwen2-VL-7B-Instruct"
+model_dir = r"V:\language_models\Qwen2-VL-2B-Instruct"
 
 model = Qwen2VLForConditionalGeneration.from_pretrained(
     model_dir,
     torch_dtype=torch.bfloat16,
-    # attn_implementation="flash_attention_2",
-    device_map="auto",
+    attn_implementation="flash_attention_2",
+    device_map="cuda",
 )
 print(model)
 print(sum(p.numel() for p in model.parameters()))
@@ -48,14 +48,18 @@ inputs = get_inputs([
             #     "type": "image",
             #     "image": "/home/user/图片/output.png",
             # },
-            {
-                "type": "image",
-                "image": "/home/user/下载/20250116-151203.jpg",
-            },
+            # {
+            #     "type": "image",
+            #     "image": "/home/user/下载/20250116-151203.jpg",
+            # },
             # {
             #     "type": "image",
             #     "image": "/home/user/下载/20250116-212347.jpg",
             # },
+            {
+                "type": "image",
+                "image": r"C:\Users\Administrator\Pictures\head.jpg",
+            },
             {"type": "text", "text": "图中这位是不动游星，你认识他吗？"},
         ],
     }

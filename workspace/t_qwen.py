@@ -1,11 +1,27 @@
+
 from transformers import Qwen2ForCausalLM, Qwen2Config, Qwen2Tokenizer
 
-config = Qwen2Config(
-    hidden_size=1024,
-    num_hidden_layers=2
+
+model_path = r"V:\language_models\Qwen2.5-7B-Instruct"
+model = Qwen2ForCausalLM.from_pretrained(
+    model_path,
+    device_map="cuda",
+    # torch_dtype="auto",
+    load_in_8bit=True
 )
-model_path = "/media/user/备份/models/qwen2.5-0.5b-instruct"
-model = Qwen2ForCausalLM.from_pretrained(model_path, device_map="auto")
 tokenizer = Qwen2Tokenizer.from_pretrained(model_path)
 print(model)
-print(tokenizer.bos_token)
+# print(tokenizer.bos_token)
+
+messages = [
+    {
+        "role": "user",
+        "content": "你好"
+    }
+]
+inputs = tokenizer.apply_chat_template(messages, tokenize=False, add_generation_prompt=True)
+inputs = tokenizer(inputs, return_tensors="pt")
+inputs = inputs.to("cuda")
+outputs = model.generate(**inputs, max_new_tokens=100)
+print(tokenizer.decode(outputs[0]))
+
