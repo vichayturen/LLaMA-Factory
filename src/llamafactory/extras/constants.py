@@ -73,7 +73,6 @@ TRAINING_ARGS = "training_args.yaml"
 TRAINING_STAGES = {
     "SFT_AdaLoRA": "sft_adalora",
     "SFT_MGLoRA": "sft_mglora",
-    "MPA": "mpa",
     "SFT": "sft",
     "RM": "rm",
     "PPO": "ppo",
