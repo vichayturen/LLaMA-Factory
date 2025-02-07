@@ -9,7 +9,7 @@
     "file_name": "alpaca_zh_demo.json"
   },
   "wkyc_sft_slot": {
-    "file_name": "wkyc/test_sft.json"
+    "file_name": "wkyc/test_sft_add_thinking.json"
   },
   "glaive_toolcall_en_demo": {
     "file_name": "glaive_toolcall_en_demo.json",

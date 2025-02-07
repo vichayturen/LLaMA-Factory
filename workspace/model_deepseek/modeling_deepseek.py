@@ -43,8 +43,7 @@ from transformers.modeling_outputs import (
 )
 from transformers.modeling_utils import PreTrainedModel
 from transformers.pytorch_utils import (
-    ALL_LAYERNORM_LAYERS,
-    is_torch_greater_or_equal_than_1_13,
+    ALL_LAYERNORM_LAYERS
 )
 from transformers.utils import (
     add_start_docstrings,
@@ -67,8 +66,7 @@ if is_flash_attn_2_available():
 # This makes `_prepare_4d_causal_attention_mask` a leaf function in the FX graph.
 # It means that the function will not be traced through and simply appear as a node in the graph.
 if is_torch_fx_available():
-    if not is_torch_greater_or_equal_than_1_13:
-        import torch.fx
+    import torch.fx
 
     _prepare_4d_causal_attention_mask = torch.fx.wrap(_prepare_4d_causal_attention_mask)
 
