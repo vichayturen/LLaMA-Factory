@@ -32,7 +32,7 @@ from .base_engine import BaseEngine, Response
 
 if TYPE_CHECKING:
     from transformers import PreTrainedModel, PreTrainedTokenizer, ProcessorMixin
-    from trl import PreTrainedModelWrapper
+    from trl_main import PreTrainedModelWrapper
 
     from ..data import Template
     from ..data.mm_plugin import ImageInput, VideoInput

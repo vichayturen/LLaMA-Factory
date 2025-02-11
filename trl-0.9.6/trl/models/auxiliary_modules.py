@@ -20,7 +20,7 @@ from huggingface_hub import hf_hub_download
 from huggingface_hub.utils import EntryNotFoundError
 from transformers import CLIPModel
 
-from trl.import_utils import is_npu_available, is_xpu_available
+from trl_main.import_utils import is_npu_available, is_xpu_available
 
 
 class MLP(nn.Module):

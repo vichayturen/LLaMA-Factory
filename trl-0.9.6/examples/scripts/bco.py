@@ -65,7 +65,7 @@ from accelerate import Accelerator, PartialState
 from datasets import Dataset, load_dataset
 from transformers import AutoModel, AutoModelForCausalLM, AutoTokenizer, HfArgumentParser, PreTrainedModel
 
-from trl import KTOConfig, KTOTrainer, ModelConfig, get_peft_config, setup_chat_format
+from trl_main import KTOConfig, KTOTrainer, ModelConfig, get_peft_config, setup_chat_format
 
 
 # Define and parse arguments.

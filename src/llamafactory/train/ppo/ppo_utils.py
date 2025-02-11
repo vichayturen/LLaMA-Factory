@@ -28,7 +28,7 @@ if is_requests_available():
 
 if TYPE_CHECKING:
     from transformers import PreTrainedModel
-    from trl import AutoModelForCausalLMWithValueHead
+    from trl_main import AutoModelForCausalLMWithValueHead
 
 
 def get_rewards_from_server(server_url: str, messages: List[str]) -> List["torch.Tensor"]:

@@ -17,7 +17,7 @@ from typing import TYPE_CHECKING, Any, Dict, Optional, TypedDict
 
 import torch
 from transformers import AutoConfig, AutoModelForCausalLM, AutoModelForVision2Seq, AutoProcessor, AutoTokenizer
-from trl import AutoModelForCausalLMWithValueHead
+from trl_main import AutoModelForCausalLMWithValueHead
 
 from ..extras import logging
 from ..extras.misc import count_parameters, skip_check_imports, try_download_model_from_other_hub

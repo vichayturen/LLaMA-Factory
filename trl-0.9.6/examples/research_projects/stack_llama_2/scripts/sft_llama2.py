@@ -16,9 +16,9 @@ from transformers import (
     set_seed,
 )
 
-from trl import SFTConfig, SFTTrainer
-from trl.import_utils import is_npu_available, is_xpu_available
-from trl.trainer import ConstantLengthDataset
+from trl_main import SFTConfig, SFTTrainer
+from trl_main.import_utils import is_npu_available, is_xpu_available
+from trl_main.trainer import ConstantLengthDataset
 
 
 @dataclass

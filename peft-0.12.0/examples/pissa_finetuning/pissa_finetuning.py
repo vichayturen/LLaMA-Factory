@@ -19,7 +19,7 @@ from typing import List, Optional
 import torch
 from datasets import load_dataset
 from transformers import AutoModelForCausalLM, AutoTokenizer, BitsAndBytesConfig, HfArgumentParser, TrainingArguments
-from trl import SFTTrainer
+from trl_main import SFTTrainer
 
 from peft import LoraConfig, PeftModel, get_peft_model, prepare_model_for_kbit_training
 

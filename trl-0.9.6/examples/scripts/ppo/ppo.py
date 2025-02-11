@@ -8,9 +8,9 @@ from transformers import (
     HfArgumentParser,
 )
 
-from trl import ModelConfig
-from trl.trainer.ppov2_trainer import PPOv2Config, PPOv2Trainer
-from trl.trainer.utils import SIMPLE_QUERY_CHAT_TEMPLATE
+from trl_main import ModelConfig
+from trl_main.trainer.ppov2_trainer import PPOv2Config, PPOv2Trainer
+from trl_main.trainer.utils import SIMPLE_QUERY_CHAT_TEMPLATE
 
 
 """

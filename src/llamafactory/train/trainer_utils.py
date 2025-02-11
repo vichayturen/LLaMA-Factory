@@ -52,7 +52,7 @@ if is_ray_available():
 
 if TYPE_CHECKING:
     from transformers import PreTrainedModel, TrainerCallback
-    from trl import AutoModelForCausalLMWithValueHead
+    from trl_main import AutoModelForCausalLMWithValueHead
 
     from ..hparams import DataArguments, RayArguments, TrainingArguments
 

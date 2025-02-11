@@ -58,7 +58,7 @@ from dataclasses import dataclass
 from datasets import load_dataset
 from transformers import AutoModelForCausalLM, AutoTokenizer, HfArgumentParser
 
-from trl import KTOConfig, KTOTrainer, ModelConfig, get_peft_config, setup_chat_format
+from trl_main import KTOConfig, KTOTrainer, ModelConfig, get_peft_config, setup_chat_format
 
 
 # Define and parse arguments.

@@ -6,7 +6,7 @@ import torch.nn as nn
 from datasets import Dataset
 from transformers import Trainer, TrainingArguments
 
-from trl.trainer.utils import RichProgressCallback
+from trl_main.trainer.utils import RichProgressCallback
 
 
 class DummyModel(nn.Module):

@@ -20,7 +20,7 @@ from parameterized import parameterized
 from pytest import mark
 from transformers import AutoModelForCausalLM, AutoModelForSeq2SeqLM, AutoTokenizer
 
-from trl import ORPOConfig, ORPOTrainer
+from trl_main import ORPOConfig, ORPOTrainer
 
 from .testing_utils import require_peft
 

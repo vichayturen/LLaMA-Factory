@@ -28,9 +28,9 @@ from transformers import (
     TrainingArguments,
 )
 
-from trl import SFTConfig, SFTTrainer
-from trl.import_utils import is_peft_available, is_pil_available
-from trl.trainer import ConstantLengthDataset, DataCollatorForCompletionOnlyLM
+from trl_main import SFTConfig, SFTTrainer
+from trl_main.import_utils import is_peft_available, is_pil_available
+from trl_main.trainer import ConstantLengthDataset, DataCollatorForCompletionOnlyLM
 
 from .testing_utils import require_peft, requires_pil
 

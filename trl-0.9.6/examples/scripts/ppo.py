@@ -25,9 +25,9 @@ from peft import LoraConfig
 from tqdm import tqdm
 from transformers import AutoTokenizer, HfArgumentParser, pipeline
 
-from trl import AutoModelForCausalLMWithValueHead, AutoModelForSeq2SeqLMWithValueHead, PPOConfig, PPOTrainer, set_seed
-from trl.core import LengthSampler
-from trl.import_utils import is_npu_available, is_xpu_available
+from trl_main import AutoModelForCausalLMWithValueHead, AutoModelForSeq2SeqLMWithValueHead, PPOConfig, PPOTrainer, set_seed
+from trl_main.core import LengthSampler
+from trl_main.import_utils import is_npu_available, is_xpu_available
 
 
 tqdm.pandas()

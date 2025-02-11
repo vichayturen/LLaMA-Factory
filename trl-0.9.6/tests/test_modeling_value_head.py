@@ -19,7 +19,7 @@ import pytest
 import torch
 from transformers import AutoModel, AutoModelForCausalLM, AutoModelForSeq2SeqLM
 
-from trl import AutoModelForCausalLMWithValueHead, AutoModelForSeq2SeqLMWithValueHead, create_reference_model
+from trl_main import AutoModelForCausalLMWithValueHead, AutoModelForSeq2SeqLMWithValueHead, create_reference_model
 
 
 ALL_CAUSAL_LM_MODELS = [

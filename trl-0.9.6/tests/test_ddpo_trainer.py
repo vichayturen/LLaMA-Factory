@@ -16,13 +16,13 @@ import unittest
 
 import torch
 
-from trl import is_diffusers_available, is_peft_available
+from trl_main import is_diffusers_available, is_peft_available
 
 from .testing_utils import require_diffusers
 
 
 if is_diffusers_available() and is_peft_available():
-    from trl import DDPOConfig, DDPOTrainer, DefaultDDPOStableDiffusionPipeline
+    from trl_main import DDPOConfig, DDPOTrainer, DefaultDDPOStableDiffusionPipeline
 
 
 def scorer_function(images, prompts, metadata):

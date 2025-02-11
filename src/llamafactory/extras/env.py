@@ -22,7 +22,7 @@ import datasets
 import peft
 import torch
 import transformers
-import trl
+import trl_main
 from transformers.utils import is_torch_cuda_available, is_torch_npu_available
 
 
@@ -39,7 +39,7 @@ def print_env() -> None:
         "Datasets version": datasets.__version__,
         "Accelerate version": accelerate.__version__,
         "PEFT version": peft.__version__,
-        "TRL version": trl.__version__,
+        "TRL version": trl_main.__version__,
     }
 
     if is_torch_cuda_available():

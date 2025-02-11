@@ -22,8 +22,8 @@ from parameterized import parameterized
 from pytest import mark
 from transformers import AutoModel, AutoModelForCausalLM, AutoModelForSeq2SeqLM, AutoTokenizer
 
-from trl import KTOConfig, KTOTrainer
-from trl.trainer.kto_trainer import _get_kl_dataset, _process_tokens, _tokenize
+from trl_main import KTOConfig, KTOTrainer
+from trl_main.trainer.kto_trainer import _get_kl_dataset, _process_tokens, _tokenize
 
 from .testing_utils import require_no_wandb, require_peft
 

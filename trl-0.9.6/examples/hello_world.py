@@ -2,7 +2,7 @@
 import torch
 from transformers import GPT2Tokenizer
 
-from trl import AutoModelForCausalLMWithValueHead, PPOConfig, PPOTrainer
+from trl_main import AutoModelForCausalLMWithValueHead, PPOConfig, PPOTrainer
 
 
 # 1. load a pretrained model

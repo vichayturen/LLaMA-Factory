@@ -14,7 +14,7 @@
 # limitations under the License.
 
 
-from trl.commands.cli_utils import init_zero_verbose
+from trl_main.commands.cli_utils import init_zero_verbose
 
 init_zero_verbose()
 
@@ -32,8 +32,8 @@ from rich.live import Live
 from rich.markdown import Markdown
 from transformers import AutoModelForCausalLM, AutoTokenizer, TextIteratorStreamer
 
-from trl.commands.cli_utils import ChatArguments, TrlParser, init_zero_verbose
-from trl.trainer.utils import get_quantization_config
+from trl_main.commands.cli_utils import ChatArguments, TrlParser, init_zero_verbose
+from trl_main.trainer.utils import get_quantization_config
 
 
 HELP_STRING = """\

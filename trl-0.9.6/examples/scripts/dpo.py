@@ -55,8 +55,8 @@ import multiprocessing
 import os
 from contextlib import nullcontext
 
-from trl.commands.cli_utils import DPOScriptArguments, init_zero_verbose, TrlParser
-from trl.env_utils import strtobool
+from trl_main.commands.cli_utils import DPOScriptArguments, init_zero_verbose, TrlParser
+from trl_main.env_utils import strtobool
 
 TRL_USE_RICH = strtobool(os.getenv("TRL_USE_RICH", "0"))
 
@@ -71,7 +71,7 @@ import torch
 from datasets import load_dataset
 from transformers import AutoModelForCausalLM, AutoTokenizer
 
-from trl import (
+from trl_main import (
     DPOConfig,
     DPOTrainer,
     ModelConfig,

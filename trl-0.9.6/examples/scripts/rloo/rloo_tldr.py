@@ -9,9 +9,9 @@ from transformers import (
     HfArgumentParser,
 )
 
-from trl import ModelConfig
-from trl.trainer.rloo_trainer import RLOOConfig, RLOOTrainer
-from trl.trainer.utils import SIMPLE_QUERY_CHAT_TEMPLATE
+from trl_main import ModelConfig
+from trl_main.trainer.rloo_trainer import RLOOConfig, RLOOTrainer
+from trl_main.trainer.utils import SIMPLE_QUERY_CHAT_TEMPLATE
 
 
 """

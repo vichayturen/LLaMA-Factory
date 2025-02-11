@@ -29,7 +29,7 @@ from transformers import (
     AutoTokenizer,
 )
 
-from trl import DPOConfig, DPOTrainer, FDivergenceType
+from trl_main import DPOConfig, DPOTrainer, FDivergenceType
 
 from .testing_utils import require_bitsandbytes, require_no_wandb, require_peft
 

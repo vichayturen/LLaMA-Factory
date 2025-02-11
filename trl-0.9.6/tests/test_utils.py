@@ -2,7 +2,7 @@ import unittest
 
 import torch
 
-from trl.trainer.utils import pad
+from trl_main.trainer.utils import pad
 
 
 class TestPad(unittest.TestCase):

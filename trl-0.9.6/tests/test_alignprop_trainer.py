@@ -16,13 +16,13 @@ import unittest
 
 import torch
 
-from trl import is_diffusers_available, is_peft_available
+from trl_main import is_diffusers_available, is_peft_available
 
 from .testing_utils import require_diffusers
 
 
 if is_diffusers_available() and is_peft_available():
-    from trl import AlignPropConfig, AlignPropTrainer, DefaultDDPOStableDiffusionPipeline
+    from trl_main import AlignPropConfig, AlignPropTrainer, DefaultDDPOStableDiffusionPipeline
 
 
 def scorer_function(images, prompts, metadata):

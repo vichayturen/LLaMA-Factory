@@ -58,7 +58,7 @@ from dataclasses import dataclass, field
 from datasets import load_dataset
 from transformers import AutoModelForCausalLM, AutoTokenizer, HfArgumentParser
 
-from trl import ModelConfig, ORPOConfig, ORPOTrainer, get_peft_config
+from trl_main import ModelConfig, ORPOConfig, ORPOTrainer, get_peft_config
 
 
 @dataclass

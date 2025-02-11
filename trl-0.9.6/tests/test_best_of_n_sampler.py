@@ -3,9 +3,9 @@ import unittest
 import torch
 from transformers import AutoTokenizer, GenerationConfig
 
-from trl import AutoModelForCausalLMWithValueHead
-from trl.core import LengthSampler
-from trl.extras import BestOfNSampler
+from trl_main import AutoModelForCausalLMWithValueHead
+from trl_main.core import LengthSampler
+from trl_main.extras import BestOfNSampler
 
 
 def queries_to_scores(list_of_strings):

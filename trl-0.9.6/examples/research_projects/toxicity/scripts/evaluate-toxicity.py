@@ -8,7 +8,7 @@ from datasets import load_dataset
 from tqdm import tqdm
 from transformers import AutoModelForCausalLM, AutoTokenizer
 
-from trl.import_utils import is_npu_available, is_xpu_available
+from trl_main.import_utils import is_npu_available, is_xpu_available
 
 
 toxicity = evaluate.load("ybelkada/toxicity", "DaNLP/da-electra-hatespeech-detection", module_type="measurement")

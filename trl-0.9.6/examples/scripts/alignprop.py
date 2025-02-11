@@ -29,8 +29,8 @@ from dataclasses import dataclass, field
 import numpy as np
 from transformers import HfArgumentParser
 
-from trl import AlignPropConfig, AlignPropTrainer, DefaultDDPOStableDiffusionPipeline
-from trl.models.auxiliary_modules import aesthetic_scorer
+from trl_main import AlignPropConfig, AlignPropTrainer, DefaultDDPOStableDiffusionPipeline
+from trl_main.models.auxiliary_modules import aesthetic_scorer
 
 
 @dataclass

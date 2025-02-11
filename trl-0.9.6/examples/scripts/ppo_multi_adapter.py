@@ -20,9 +20,9 @@ from peft import LoraConfig
 from tqdm import tqdm
 from transformers import AutoTokenizer, BitsAndBytesConfig, HfArgumentParser
 
-from trl import AutoModelForCausalLMWithValueHead, PPOConfig, PPOTrainer
-from trl.core import LengthSampler
-from trl.import_utils import is_npu_available, is_xpu_available
+from trl_main import AutoModelForCausalLMWithValueHead, PPOConfig, PPOTrainer
+from trl_main.core import LengthSampler
+from trl_main.import_utils import is_npu_available, is_xpu_available
 
 
 input_min_text_length = 6

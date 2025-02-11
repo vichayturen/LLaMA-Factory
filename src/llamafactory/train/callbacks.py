@@ -45,7 +45,7 @@ if is_safetensors_available():
 
 if TYPE_CHECKING:
     from transformers import TrainerControl, TrainerState, TrainingArguments
-    from trl import AutoModelForCausalLMWithValueHead
+    from trl_main import AutoModelForCausalLMWithValueHead
 
     from ..hparams import DataArguments, FinetuningArguments, GeneratingArguments, ModelArguments
 

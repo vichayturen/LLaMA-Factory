@@ -45,7 +45,7 @@ from .model_utils.visual import (
 
 if TYPE_CHECKING:
     from transformers import PretrainedConfig, PreTrainedTokenizer, ProcessorMixin
-    from trl import AutoModelForCausalLMWithValueHead
+    from trl_main import AutoModelForCausalLMWithValueHead
 
     from ..hparams import ModelArguments
 

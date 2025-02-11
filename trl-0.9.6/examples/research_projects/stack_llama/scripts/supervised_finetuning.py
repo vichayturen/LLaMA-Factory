@@ -7,8 +7,8 @@ from peft import LoraConfig
 from tqdm import tqdm
 from transformers import AutoModelForCausalLM, AutoTokenizer, TrainingArguments, logging, set_seed
 
-from trl import SFTTrainer
-from trl.trainer import ConstantLengthDataset
+from trl_main import SFTTrainer
+from trl_main.trainer import ConstantLengthDataset
 
 
 """

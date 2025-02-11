@@ -68,8 +68,8 @@ import logging
 import os
 from contextlib import nullcontext
 
-from trl.commands.cli_utils import init_zero_verbose, SFTScriptArguments, TrlParser
-from trl.env_utils import strtobool
+from trl_main.commands.cli_utils import init_zero_verbose, SFTScriptArguments, TrlParser
+from trl_main.env_utils import strtobool
 
 TRL_USE_RICH = strtobool(os.getenv("TRL_USE_RICH", "0"))
 
@@ -87,7 +87,7 @@ from datasets import load_dataset
 from tqdm.rich import tqdm
 from transformers import AutoTokenizer, AutoProcessor, LlavaForConditionalGeneration
 
-from trl import (
+from trl_main import (
     ModelConfig,
     RichProgressCallback,
     SFTConfig,

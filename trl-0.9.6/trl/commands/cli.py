@@ -28,7 +28,7 @@ def main():
     console = Console()
     # Make sure to import things locally to avoid verbose from third party libs.
     with console.status("[bold purple]Welcome! Initializing the TRL CLI..."):
-        from trl.commands.cli_utils import init_zero_verbose
+        from trl_main.commands.cli_utils import init_zero_verbose
 
         init_zero_verbose()
 

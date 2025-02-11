@@ -34,8 +34,8 @@ from huggingface_hub import hf_hub_download
 from huggingface_hub.utils import EntryNotFoundError
 from transformers import CLIPModel, CLIPProcessor, HfArgumentParser
 
-from trl import DDPOConfig, DDPOTrainer, DefaultDDPOStableDiffusionPipeline
-from trl.import_utils import is_npu_available, is_xpu_available
+from trl_main import DDPOConfig, DDPOTrainer, DefaultDDPOStableDiffusionPipeline
+from trl_main.import_utils import is_npu_available, is_xpu_available
 
 
 @dataclass

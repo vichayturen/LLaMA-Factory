@@ -17,7 +17,7 @@ from typing import TYPE_CHECKING, Dict, Optional, Sequence, Set, Tuple, Union
 import torch
 from peft import PeftModel
 from transformers import AutoModelForCausalLM
-from trl import AutoModelForCausalLMWithValueHead
+from trl_main import AutoModelForCausalLMWithValueHead
 
 from ..data import get_dataset, get_template_and_fix_tokenizer
 from ..extras.misc import get_current_device

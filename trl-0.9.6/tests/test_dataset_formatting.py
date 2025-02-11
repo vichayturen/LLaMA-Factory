@@ -4,8 +4,8 @@ from typing import Callable
 from datasets import Dataset, load_dataset
 from transformers import AutoModelForCausalLM, AutoTokenizer
 
-from trl.extras.dataset_formatting import get_formatting_func_from_dataset
-from trl.models.utils import ChatMlSpecialTokens, setup_chat_format
+from trl_main.extras.dataset_formatting import get_formatting_func_from_dataset
+from trl_main.models.utils import ChatMlSpecialTokens, setup_chat_format
 
 
 class DatasetFormattingTestCase(unittest.TestCase):

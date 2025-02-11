@@ -4,7 +4,7 @@ from dataclasses import dataclass, field
 from typing import Optional
 
 from transformers import HfArgumentParser, TrainingArguments, set_seed
-from trl import SFTTrainer
+from trl_main import SFTTrainer
 from utils import create_and_prepare_model, create_datasets
 
 

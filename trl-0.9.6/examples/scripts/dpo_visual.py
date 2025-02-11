@@ -32,7 +32,7 @@ from contextlib import nullcontext
 
 TRL_USE_RICH = os.environ.get("TRL_USE_RICH", False)
 
-from trl.commands.cli_utils import DPOScriptArguments, init_zero_verbose, TrlParser
+from trl_main.commands.cli_utils import DPOScriptArguments, init_zero_verbose, TrlParser
 from accelerate import PartialState
 
 if TRL_USE_RICH:
@@ -46,7 +46,7 @@ import torch
 from datasets import load_dataset
 from transformers import AutoModelForVision2Seq, AutoProcessor
 
-from trl import (
+from trl_main import (
     DPOConfig,
     DPOTrainer,
     ModelConfig,

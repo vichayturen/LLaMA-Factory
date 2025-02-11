@@ -91,7 +91,7 @@ This is a basic example of how to use the `SFTTrainer` from the library. The `SF
 ```python
 # imports
 from datasets import load_dataset
-from trl import SFTTrainer
+from trl_main import SFTTrainer
 
 # get dataset
 dataset = load_dataset("imdb", split="train")
@@ -115,7 +115,7 @@ This is a basic example of how to use the `RewardTrainer` from the library. The 
 ```python
 # imports
 from transformers import AutoModelForSequenceClassification, AutoTokenizer
-from trl import RewardTrainer
+from trl_main import RewardTrainer
 
 # load model and dataset - dataset needs to be in a specific format
 model = AutoModelForSequenceClassification.from_pretrained("gpt2", num_labels=1)
@@ -142,8 +142,8 @@ This is a basic example of how to use the `PPOTrainer` from the library. Based o
 # imports
 import torch
 from transformers import AutoTokenizer
-from trl import PPOTrainer, PPOConfig, AutoModelForCausalLMWithValueHead, create_reference_model
-from trl.core import respond_to_batch
+from trl_main import PPOTrainer, PPOConfig, AutoModelForCausalLMWithValueHead, create_reference_model
+from trl_main.core import respond_to_batch
 
 # get models
 model = AutoModelForCausalLMWithValueHead.from_pretrained('gpt2')
@@ -160,7 +160,7 @@ query_txt = "This morning I went to the "
 query_tensor = tokenizer.encode(query_txt, return_tensors="pt")
 
 # get model response
-response_tensor  = respond_to_batch(model, query_tensor)
+response_tensor = respond_to_batch(model, query_tensor)
 
 # create a ppo trainer
 ppo_trainer = PPOTrainer(ppo_config, model, model_ref, tokenizer)
@@ -180,7 +180,7 @@ train_stats = ppo_trainer.step([query_tensor[0]], [response_tensor[0]], reward)
 ```python
 # imports
 from transformers import AutoModelForCausalLM, AutoTokenizer
-from trl import DPOTrainer
+from trl_main import DPOTrainer
 
 # load model and dataset - dataset needs to be in a specific format
 model = AutoModelForCausalLM.from_pretrained("gpt2")

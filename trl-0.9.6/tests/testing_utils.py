@@ -15,7 +15,7 @@ import unittest
 
 import torch
 
-from trl import (
+from trl_main import (
     is_bitsandbytes_available,
     is_diffusers_available,
     is_peft_available,

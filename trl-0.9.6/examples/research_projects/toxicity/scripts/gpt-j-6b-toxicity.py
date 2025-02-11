@@ -26,8 +26,8 @@ from transformers import (
     RobertaTokenizer,
 )
 
-from trl import AutoModelForCausalLMWithValueHead, PPOConfig, PPOTrainer, create_reference_model, set_seed
-from trl.core import LengthSampler
+from trl_main import AutoModelForCausalLMWithValueHead, PPOConfig, PPOTrainer, create_reference_model, set_seed
+from trl_main.core import LengthSampler
 
 
 tqdm.pandas()
