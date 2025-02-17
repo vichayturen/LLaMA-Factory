@@ -11,6 +11,20 @@
   "wkyc_sft_slot": {
     "file_name": "wkyc/test_sft_add_thinking.json"
   },
+  "wkyc_kto_slot": {
+    "file_name": "wkyc/test_kto.json",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "messages",
+      "kto_tag": "label"
+    },
+    "tags": {
+      "role_tag": "role",
+      "content_tag": "content",
+      "user_tag": "user",
+      "assistant_tag": "assistant"
+    }
+  },
   "glaive_toolcall_en_demo": {
     "file_name": "glaive_toolcall_en_demo.json",
     "formatting": "sharegpt",
