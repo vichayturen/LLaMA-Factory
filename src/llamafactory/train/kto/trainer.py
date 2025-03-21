@@ -23,8 +23,8 @@ from typing import TYPE_CHECKING, Dict, List, Literal, Optional, Tuple, Union
 
 import torch
 from transformers import Trainer
-from trl_main import KTOTrainer
-from trl_main.trainer import disable_dropout_in_model
+from trl import KTOTrainer
+from trl.trainer import disable_dropout_in_model
 from typing_extensions import override
 
 from ...extras.constants import IGNORE_INDEX

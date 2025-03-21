@@ -24,8 +24,8 @@ from typing import TYPE_CHECKING, Dict, List, Literal, Optional, Tuple, Union
 import torch
 import torch.nn.functional as F
 from transformers import Trainer
-from trl_main import DPOTrainer
-from trl_main.trainer import disable_dropout_in_model
+from trl import DPOTrainer
+from trl.trainer import disable_dropout_in_model
 from typing_extensions import override
 
 from ...extras.constants import IGNORE_INDEX

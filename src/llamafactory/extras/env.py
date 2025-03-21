@@ -22,7 +22,7 @@ import datasets
 import peft
 import torch
 import transformers
-import trl_main
+import trl
 from transformers.utils import is_torch_cuda_available, is_torch_npu_available
 
 
